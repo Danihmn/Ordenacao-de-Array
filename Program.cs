@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             int[] vetor = new int[6] { 3, 2, 6, 4, 7, 9 }; // Cria um array para ser organizado
-            inSort(vetor);
+            inSort(vetor); // Chama o método de ordenação
 
             foreach (int i in vetor)
             {
