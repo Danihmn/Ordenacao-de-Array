@@ -4,51 +4,44 @@
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[20] { 5, 2, 9, 1, 5, 6, 7, 3, 8, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18 };
-            int[] arr2 = new int[20] { 3, 2, 1, 5, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18, 19, 20, 21, 22, 23 };
+            int[] arr = { 5, 2, 9, 1, 5, 6, 7, 3, 8, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18 };
 
-            Console.WriteLine("Antes da ordenação:");
+            // Exibir o array original
+            Console.WriteLine("Array original:");
+            Exibir(arr);
 
-            Console.WriteLine("\n");
+            Console.WriteLine("Array ordenado com Insertion Sort:");
+            Algoritmos.inSort(arr);
+            Exibir(arr);
 
-            // Exibir os arrays antes da ordenação
-            Exibir(arr, arr2);
+            int[] arr2 = { 5, 2, 9, 1, 5, 6, 7, 3, 8, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18 };
 
-            Ordenar(arr, arr2);
+            // Exibir o array original
+            Console.WriteLine("Array original:");
+            Exibir(arr2);
 
-            Console.WriteLine("\n\nDepois da ordenação:");
+            Console.WriteLine("\n\nArray ordenado com Bubble Sort:");
+            Algoritmos.BubbleSort(arr2);
+            Exibir(arr2);
 
-            // Exibir os arrays após a ordenação
-            Console.WriteLine("\n");
-            Exibir(arr, arr2);
+            Console.WriteLine("\n---------------------------------------\n");
+
+            // Busca sequencial
+            Algoritmos.BuscaSequencial(arr, 5);
+
         }
 
-        static void Ordenar(int[] arr, int[] arr2)
-        {
-            // Ordenar os arrays
-            OrdenacaoAlgoritmos.BubbleSort(arr);
-            OrdenacaoAlgoritmos.inSort(arr2);
-        }
-
-        static void Exibir(int[] arr, int[] arr2)
+        static void Exibir(int[] arr)
         {
             // Exibir os arrays ordenados
             foreach (int i in arr)
             {
                 Console.Write(i + " ");
             }
-
-            Console.WriteLine("\n");
-
-            foreach (int i in arr2)
-            {
-                Console.Write(i + " ");
-            }
         }
     }
 
-    // Classe responsável por implementar os métodos de ordenação
-    public class OrdenacaoAlgoritmos
+    public class Algoritmos
     {
         static public void inSort(int[] arr)
         {
@@ -81,6 +74,27 @@
                         arr[j + 1] = temp;
                     }
                 }
+            }
+        }
+
+        static public void BuscaSequencial(int[] arr, int valor)
+        {
+            try
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i] == valor)
+                    {
+                        Console.WriteLine("Valor encontrado na posição: " + i);
+                        return;
+                    }
+                    Console.WriteLine("Valor não encontrado");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
             }
         }
     }
