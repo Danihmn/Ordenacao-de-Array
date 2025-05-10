@@ -47,6 +47,7 @@
         }
     }
 
+    // Classe responsável por implementar os métodos de ordenação
     public class OrdenacaoAlgoritmos
     {
         static public void inSort(int[] arr)
