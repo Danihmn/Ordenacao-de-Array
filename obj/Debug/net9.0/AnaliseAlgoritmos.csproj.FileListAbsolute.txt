@@ -1,0 +1,15 @@
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\bin\Debug\net9.0\AnaliseAlgoritmos.exe
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\bin\Debug\net9.0\AnaliseAlgoritmos.deps.json
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\bin\Debug\net9.0\AnaliseAlgoritmos.runtimeconfig.json
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\bin\Debug\net9.0\AnaliseAlgoritmos.dll
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\bin\Debug\net9.0\AnaliseAlgoritmos.pdb
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.AssemblyInfoInputs.cache
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.AssemblyInfo.cs
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.csproj.CoreCompileInputs.cache
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.sourcelink.json
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.dll
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\refint\AnaliseAlgoritmos.dll
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.pdb
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\AnaliseAlgoritmos.genruntimeconfig.cache
+C:\Dev.NET\Estudos\AnaliseAlgoritmos\obj\Debug\net9.0\ref\AnaliseAlgoritmos.dll

@@ -26,75 +26,111 @@
 
             Console.WriteLine("\n---------------------------------------\n");
 
-            // Busca sequencial
+            // Busca sequencial e binária
             Algoritmos.BuscaSequencial(arr, 5);
 
-        }
+            // Busca binária
+            int resultado = Algoritmos.BuscaBinaria(arr, 5);
 
-        static void Exibir(int[] arr)
-        {
-            // Exibir os arrays ordenados
-            foreach (int i in arr)
+            if (resultado != -1)
             {
-                Console.Write(i + " ");
+                Console.WriteLine("Valor encontrado na posição: " + resultado);
             }
-        }
-    }
-
-    public class Algoritmos
-    {
-        static public void inSort(int[] arr)
-        {
-            for (int i = 1; i < arr.Length; i++)
+            else
             {
-                int chave = arr[i];
-                int j = i - 1;
+                Console.WriteLine("Valor não encontrado");
+            }
 
-                while (j >= 0 && arr[j] > chave)
+            static void Exibir(int[] arr)
+            {
+                // Exibir os arrays ordenados
+                foreach (int i in arr)
                 {
-                    arr[j + 1] = arr[j];
-                    j--;
+                    Console.Write(i + " ");
                 }
-
-                arr[j + 1] = chave;
             }
         }
 
-        // Método de ordenação BubbleSort
-        static public void BubbleSort(int[] arr)
+        public class Algoritmos
         {
-            for (int i = 0; i < arr.Length - 1; i++)
+            static public void inSort(int[] arr)
             {
-                for (int j = 0; j < arr.Length - i - 1; j++)
+                for (int i = 1; i < arr.Length; i++)
                 {
-                    if (arr[j] > arr[j + 1])
+                    int chave = arr[i];
+                    int j = i - 1;
+
+                    while (j >= 0 && arr[j] > chave)
                     {
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
+                        arr[j + 1] = arr[j];
+                        j--;
+                    }
+
+                    arr[j + 1] = chave;
+                }
+            }
+
+            // Método de ordenação BubbleSort
+            static public void BubbleSort(int[] arr)
+            {
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    for (int j = 0; j < arr.Length - i - 1; j++)
+                    {
+                        if (arr[j] > arr[j + 1])
+                        {
+                            int temp = arr[j];
+                            arr[j] = arr[j + 1];
+                            arr[j + 1] = temp;
+                        }
                     }
                 }
             }
-        }
 
-        static public void BuscaSequencial(int[] arr, int valor)
-        {
-            try
+            static public void BuscaSequencial(int[] arr, int valor)
             {
-                for (int i = 0; i < arr.Length; i++)
+                try
                 {
-                    if (arr[i] == valor)
+                    for (int i = 0; i < arr.Length; i++)
                     {
-                        Console.WriteLine("Valor encontrado na posição: " + i);
-                        return;
+                        if (arr[i] == valor)
+                        {
+                            Console.WriteLine("Valor encontrado na posição: " + i);
+                            return;
+                        }
+                        Console.WriteLine("Valor não encontrado");
                     }
-                    Console.WriteLine("Valor não encontrado");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+
                 }
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
 
+            static public int BuscaBinaria(int[] lista, int valor)
+            {
+                int inicio = 0;
+                int fim = lista.Length - 1;
+
+                while (inicio <= fim)
+                {
+                    int meio = inicio + (fim - inicio) / 2;
+
+                    if (lista[meio] == valor) // Se o meio da lista for igual ao valor procurado
+                    {
+                        return meio; // No loop, quando o valor for encontrado, retornará a sua posição
+                    }
+                    else if (lista[meio] < valor) // Se o meio for menor que o valor procurado
+                    {
+                        inicio = meio + 1; // Foca a procura na metade direita
+                    }
+                    else // Se o meio for maior que o valor procurado
+                    {
+                        fim = meio - 1; // Foca a procura na metade esquerda
+                    }
+                }
+                return -1; // Valor não encontrado
             }
         }
     }
