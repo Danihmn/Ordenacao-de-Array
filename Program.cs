@@ -4,25 +4,17 @@
     {
         static void Main(string[] args)
         {
-            int[] vetor = new int[6] { 3, 2, 6, 4, 7, 9 }; // Cria um array para ser organizado
-            inSort(vetor); // Chama o método de ordenação
+            int[] arr = new int[20] { 5, 2, 9, 1, 5, 6, 7, 3, 8, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18 };
+            int[] arr2 = new int[20] { 5, 2, 9, 1, 5, 6, 7, 3, 8, 4, 0, 10, 12, 11, 14, 13, 15, 17, 16, 18 };
 
-            foreach (int i in vetor)
-            {
-                Console.Write(i + " ");
-            }
-
-            int[] vetor2 = new int[] { 3, 2, 6, 4, 7, 9 }; // Cria um segundo array para ser organizado
-            BubbleSort(vetor2); // Chama o método de ordenação
-
-            // Array depois de ordenado
-            foreach (int i in vetor2)
-            {
-                Console.Write(i + " ");
-            }
+            OrdenacaoAlgoritmos.BubbleSort(arr);
+            OrdenacaoAlgoritmos.inSort(arr2);
         }
+    }
 
-        static void inSort(int[] arr)
+    public class OrdenacaoAlgoritmos
+    {
+        static public void inSort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
             {
@@ -40,7 +32,7 @@
         }
 
         // Método de ordenação BubbleSort
-        static void BubbleSort(int[] arr)
+        static public void BubbleSort(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
             {
