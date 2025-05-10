@@ -1,1 +1,1 @@
-<h2>Estudo de algoritmos<h2>
+Estudo de algoritmos
